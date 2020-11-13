@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ex2 {
+public class hiposenusa {
     public static void main(String[] args) throws Exception {
         int catetoOne , catetoTwo;
         double hipotenusa;

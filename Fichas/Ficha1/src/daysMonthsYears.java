@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ex1 {
+public class daysMonthsYears {
     public static void main(String[] args) throws Exception {
         int days, months, years, result;
 
