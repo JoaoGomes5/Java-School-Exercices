@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Vectores {
     
-      static int[] readVector(int n){
+     public  static int[] readVector(int n){
         Scanner sc = new Scanner(System.in);
         int[] vector = new int[n];
         
@@ -17,7 +17,7 @@ public class Vectores {
 
     }
     
-     static int higherValueOnArray(int[] vector, int n){
+    public static int higherValueOnArray(int[] vector, int n){
         int max = vector[0];
         
         for (int i = 0 ; i < n ; i++) {
@@ -29,7 +29,7 @@ public class Vectores {
         return max;
     }
      
-     static int lowValueOnArray(int[] vector, int n){
+    public  static int lowValueOnArray(int[] vector, int n){
         int low = vector[0];
         
         for (int i = 0 ; i < n ; i++) {
@@ -41,7 +41,7 @@ public class Vectores {
         return low;
     }
      
-     static double mediaValueOnArray(int[] vector, int n ){
+    public  static double mediaValueOnArray(int[] vector, int n ){
          int sum = 0; 
          
          for (int i = 0; i < n; i++) {
