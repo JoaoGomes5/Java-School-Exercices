@@ -18,7 +18,7 @@ public class hiposenusa {
                          Math.pow(catetoOne, 2) + Math.pow(catetoTwo, 2) 
                             )
                       );
-        
+        System.out.println();     
         System.out.println("A hipotenusa é " + hipotenusa);
 
     }
