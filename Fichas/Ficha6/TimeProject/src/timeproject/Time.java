@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package timeproject;
-
 /**
  *
  * @author João Gomes
@@ -24,28 +23,63 @@ public class Time {
             this.seconds++;
         }
         
-        public String getTimeFormatted(int hour, int minute, int seconds ){
+        public void setTime(int hour, int minutes, int seconds){
+            this.hour = hour;
+            this.minutes = minutes;
+            this.seconds = seconds;
+        }
+        
+        public String getTimeFormatted(){
             
-            String formattedHour = (hour + ":" + minute + ":" + seconds);
+            String formattedHour = (this.hour + ":" + this.minutes + ":" + this.seconds);
             
             return formattedHour;
         }
         
-        public String getTimeOfDay(int hour, int minute, int seconds ){
-            
-            
+        public String getTimeOfDay(){
+               
             if(hour <=12  && hour >= 00){
-                String formattedHour = ( this.getTimeFormatted(hour, minute, seconds)  + "PM");
+                String formattedHour = (this.hour + ":" + this.minutes + ":" + this.seconds + "PM");
                 
                 return formattedHour;
             }else {
-                 String formattedHour = (this.getTimeFormatted(hour, minute, seconds) + "AM");
+                 String formattedHour = (this.hour + ":" + this.minutes + ":" + this.seconds + "AM");
                  
                  return formattedHour;
             }
            
         }
         
+        public boolean compareTimes(Time otherTime){
+            
+            if(this.hour > otherTime.hour && this.hour != otherTime.hour){
+                return true;
+            }
+            
+            if(this.hour == otherTime.hour){
+                if(this.minutes > otherTime.minutes){
+                    return true;
+                }
+                if(this.minutes == otherTime.minutes){
+                    if(this.seconds > otherTime.seconds){
+                        return true;
+                    }
+                }
+            }
+            
+            return false;
+        }
+        
+        public int secondsDiference(Time otherTime){
+            
+            int diference = Math.abs(this.seconds - otherTime.seconds);
+            
+            return diference;
+       }
+        
+        public void timeDiference(Time otherTime){
+           
+        }
         
         
 }
